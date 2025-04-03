@@ -2,10 +2,10 @@ import React, {useState} from "react";
 import "./Passengers.css";
 
 export const Passengers = ({state, send}) => {
-  const [value, changeValue] = useState("");
+  const [value, setValue] = useState("");
 
   const onChangeInput = (e) => {
-    changeValue(e.target.value);
+    setValue(e.target.value);
   };
 
   const goToTicket = () => {
@@ -14,7 +14,8 @@ export const Passengers = ({state, send}) => {
 
   const submit = (e) => {
     e.preventDefault();
-    changeValue("");
+    send("ADD", {newPassenger: value});
+    setValue("");
   };
 
   return (
