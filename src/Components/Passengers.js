@@ -31,21 +31,21 @@ export const Passengers = ({state, send}) => {
         </p>
       ))}
       <input
-        id='name'
-        name='name'
         type='text'
+        name='name'
+        id='name'
         placeholder='Escribe el nombre completo'
         required
         value={value}
         onChange={onChangeInput}
       />
       <div className='Passengers-buttons'>
-        <button className='Passengers-add button-secondary' type='submit'>
+        <button type='submit' className='Passengers-add button-secondary'>
           Agregar Pasajero
         </button>
         <button
-          className='Passenger-pay button'
           type='button'
+          className='Passenger-pay button'
           onClick={goToTicket}>
           Ver mi ticket
         </button>
